@@ -1,11 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SkyCast - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <div class="app-container">
+
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">☀</span>
+                <h2>SkyCast</h2>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="cityInput"
+                       placeholder="Search city...">
+                <button id="searchBtn">🔍</button>
+            </div>
+
+            <button class="location-btn" id="locationBtn">
+                📍 My Location
+            </button>
+        </header>
+
+        <main>
+
+            <div id="status" class="status"></div>
+
+            <section class="main-weather">
+
+                <div class="weather-info">
+                    <p class="small-title">CURRENT WEATHER</p>
+
+                    <h1 id="cityName">Colombo</h1>
+                    <p id="date">Loading date...</p>
+
+                    <div class="temperature">
+                        <span id="weatherIcon">☀️</span>
+                        <h2 id="temperature">--°</h2>
+                    </div>
+
+                    <h3 id="weatherCondition">Loading...</h3>
+
+                    <p class="feels">
+                        Feels like <span id="feelsLike">--°C</span>
+                    </p>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <span>💧</span>
+                        <div>
+                            <p>Humidity</p>
+                            <h3 id="humidity">--%</h3>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <span>💨</span>
+                        <div>
+                            <p>Wind Speed</p>
+                            <h3 id="windSpeed">-- km/h</h3>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <span>🌅</span>
+                        <div>
+                            <p>Sunrise</p>
+                            <h3 id="sunrise">--:--</h3>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <span>🌇</span>
+                        <div>
+                            <p>Sunset</p>
+                            <h3 id="sunset">--:--</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="forecast-section">
+                <h2>7-Day Forecast</h2>
+
+                <div class="forecast-container" id="forecast">
+                    <p>Loading forecast...</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>SkyCast Weather App | Powered by Open-Meteo</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
